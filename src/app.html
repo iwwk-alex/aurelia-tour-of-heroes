@@ -1,3 +1,14 @@
 <template>
-  <h1>${message}</h1>
+  <require from="./app.scss"></require>
+
+  <h1>${title}</h1>
+  <div class="header-bar">
+
+  </div>
+  <nav>
+    <a href="/${nav.href}" repeat.for="nav of router.navigation">${nav.title}</a>
+  </nav>
+  
+  <router-view></router-view>
+  
 </template>

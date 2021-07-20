@@ -1,0 +1,11 @@
+<template>
+  <div>Heroes</div>
+  <div>
+    <button click.delegate="addHero()">ADD</button>
+    <button>REFRESH</button>
+  </div>
+  <compose></compose>
+  <div repeat.for="hero of heroes">
+    ${hero.model.name}
+  </div>
+</template>
