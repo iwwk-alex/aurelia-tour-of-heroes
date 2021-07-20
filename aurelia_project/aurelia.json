@@ -1,5 +1,5 @@
 {
-  "name": "tour-heroes",
+  "name": "aurelia-tour-of-heroes",
   "type": "project:application",
   "paths": {
     "root": "src",

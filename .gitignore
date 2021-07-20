@@ -35,3 +35,7 @@ node_modules
 /src/environment.ts
 /dist
 /test/coverage-jest
+/cypress/videos
+/cypress/screenshots
+
+.history
