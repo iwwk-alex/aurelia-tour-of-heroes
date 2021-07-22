@@ -18,9 +18,13 @@ export class Heroes {
   }
 
   created(owningView: View, myView: View): void {
-    this._heroes = new WrappingCollection(
-      item => this.viewModelCreatorService.create<Item>(Item, item),
-      this.dataService.heroes);
+    this.dataService.getHeroes()
+        .then(heroes => {
+        this._heroes = new WrappingCollection(
+          item => this.viewModelCreatorService.create<Item>(Item, item),
+          this.dataService.heroes);
+        })
+        .catch(alert);
   }
 
   public get heroes(): WrappingCollection {
