@@ -19,7 +19,7 @@ export class Heroes {
 
   created(owningView: View, myView: View): void {
     this.dataService.getHeroes()
-        .then(heroes => {
+        .then(_ => {
         this._heroes = new WrappingCollection(
           item => this.viewModelCreatorService.create<Item>(Item, item),
           this.dataService.heroes);

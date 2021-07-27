@@ -1,5 +1,4 @@
-import { FrameworkConfiguration } from 'aurelia-framework';
-import {PLATFORM} from "aurelia-pal";
+import { FrameworkConfiguration, PLATFORM } from 'aurelia-framework';
 
 export function configure(config: FrameworkConfiguration): void {
   // config.globalResources(['./page-header/page-header']);
