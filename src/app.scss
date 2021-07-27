@@ -72,3 +72,47 @@ nav a.router-link-active {
     width: 100%;
   }
 }
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+  &__title {
+    border-left: 16px solid #b52e31;
+    border-bottom: 2px solid #b52e31;
+    padding-left: 8px;
+    padding-right: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #555;
+    letter-spacing: 0;
+    &-text {
+      margin: 0;
+    }
+  }
+  &__actions {
+    display: flex;
+    flex-direction: row;
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #fff;
+    border-color: transparent;
+    border-width: 1px;
+    color: #999;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 18px;
+    background-size: cover;
+    display: block;
+    transition: coloe .27s;
+    &:hover {
+      color: #b52e31;
+    }
+  }
+}
+

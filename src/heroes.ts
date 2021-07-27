@@ -17,6 +17,13 @@ export class Heroes {
                     .catch((e: Error) => alert(e.message));
   }
 
+  /**
+   * refresh
+   */
+  public refresh(): void {
+    //
+  }
+
   created(owningView: View, myView: View): void {
     this.dataService.getHeroes()
         .then(_ => {

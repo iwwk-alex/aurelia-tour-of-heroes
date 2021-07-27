@@ -1,14 +1,19 @@
 <template>
-  <require from = "./resources/components/page-header/page-header.html"></require>
-
-  <div class="heroes__container"></div>
-    <page-header></page-header>
-    <div>
-      <button click.trigger="addHero()">ADD</button>
-      <button>REFRESH</button>
-    </div>    
+  
+  <div class="heroes__container">
+    <div class="page-header">
+      <div class="page-header__title">
+        <h2 class="page-header__title-text">Heroes</h2>
+      </div>
+      <div class="page-header__actions">
+        <button class="page-header__btn" click.delegate="addHero()"><i class="fa fa-plus"></i></button>
+        <button class="page-header__btn" click.delegate="refresh()"><i class="fa fa-refresh"></i></button>
+      </div>
+    </div>
+    
     <div repeat.for="hero of heroes">
-      ${hero.model.name} - ${hero.model.description}
       <compose view-model.bind="hero" view="./item.html"></compose>
     </div>
+  </div>
+
 </template>
