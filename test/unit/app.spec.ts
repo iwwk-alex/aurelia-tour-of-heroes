@@ -2,7 +2,7 @@ import {bootstrap} from 'aurelia-bootstrapper';
 import {StageComponent} from 'aurelia-testing';
 import {PLATFORM} from 'aurelia-pal';
 
-describe('Stage App Component', () => {
+describe('Stage Person Component', () => {
   let component;
 
   beforeEach(() => {

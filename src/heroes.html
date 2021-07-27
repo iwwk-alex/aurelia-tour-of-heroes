@@ -1,11 +1,16 @@
 <template>
-  <div>Heroes</div>
-  <div>
-    <button click.delegate="addHero()">ADD</button>
-    <button>REFRESH</button>
-  </div>
-  <compose></compose>
-  <div repeat.for="hero of heroes">
-    ${hero.model.name} - ${hero.model.description}
-  </div>
+  <require from = "./resources/components/page-header/page-header.html"></require>
+  <require from = "./resources/components/person/person.html"></require>
+
+  <div class="heroes__container"></div>
+    <page-header></page-header>
+    <person></person>
+    <div>
+      <button click.delegate="addHero()">ADD</button>
+      <button>REFRESH</button>
+    </div>
+    <compose></compose>
+    <div repeat.for="hero of heroes">
+      ${hero.model.name} - ${hero.model.description}
+    </div>
 </template>

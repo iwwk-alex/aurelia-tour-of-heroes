@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@aurelia-mdc-web/icon-button": "^6.2.2",
     "@logofx/aurelia-mvvm-plugin": "^0.2.2",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-binding": "^2.5.4",

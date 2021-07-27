@@ -85,7 +85,7 @@ module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, h
     // moduleIds is the replacement for HashedModuleIdsPlugin and NamedModulesPlugin deprecated in https://github.com/webpack/webpack/releases/tag/v4.16.0
     // changes module id's to use hashes be based on the relative path of the module, required for long term cacheability
     moduleIds: 'hashed',
-    // Use splitChunks to breakdown the App/Aurelia bundle down into smaller chunks
+    // Use splitChunks to breakdown the Person/Aurelia bundle down into smaller chunks
     // https://webpack.js.org/plugins/split-chunks-plugin/
     splitChunks: {
       hidePathInfo: true, // prevents the path from being used in the filename when using maxSize
