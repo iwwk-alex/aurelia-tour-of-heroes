@@ -70,9 +70,13 @@ nav a.router-link-active {
       margin: 0 0 0 8px;
       background-color: transparent;
       transition: background-color .27s;
-      &:hover,
+      color: #363636;
+      &:hover {
+        background-color: #f5f5f5;
+        color: #363636;
+      }
       &._active-link{
-        background-color: #b52e31;
+        background-color: #ed2b88;
         color: #ffffff;
       }
     }
@@ -113,7 +117,7 @@ nav a.router-link-active {
         color: #ccc;
       }
       &._heroes {
-        color: #eb7a7c;
+        color: #ed2b88;
       }
     }
   }
@@ -123,8 +127,8 @@ nav a.router-link-active {
   flex-direction: row;
   margin-bottom: 18px;
   &__title {
-    border-left: 16px solid #b52e31;
-    border-bottom: 2px solid #b52e31;
+    border-left: 16px solid #ed2b88;
+    border-bottom: 2px solid #ed2b88;
     padding-left: 8px;
     padding-right: 16px;
     display: inline-block;
@@ -156,7 +160,7 @@ nav a.router-link-active {
     display: block;
     transition: coloe .27s;
     &:hover {
-      color: #b52e31;
+      color: #ed2b88;
     }
   }
 }

@@ -3,8 +3,8 @@
   flex-direction: row;
   margin-bottom: 18px;
   &__title {
-    border-left: 16px solid #b52e31;
-    border-bottom: 2px solid #b52e31;
+    border-left: 16px solid #ed2b88;
+    border-bottom: 2px solid #ed2b88;
     padding-left: 8px;
     padding-right: 16px;
     display: inline-block;
@@ -36,7 +36,7 @@
     display: block;
     transition: coloe .27s;
     &:hover {
-      color: #b52e31;
+      color: #ed2b88;
     }
   }
 }
