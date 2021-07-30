@@ -160,4 +160,9 @@ nav a.router-link-active {
     }
   }
 }
-
+.page {
+  &-body {
+    height: calc( 100vh - 170px);
+    overflow: auto;
+  }
+}

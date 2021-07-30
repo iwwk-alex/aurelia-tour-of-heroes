@@ -9,9 +9,11 @@
         <button class="page-header__btn" click.delegate="refresh()"><i class="fa fa-refresh"></i></button>
       </div>
     </div>
-    
-    <div repeat.for="hero of heroes">
-      <compose view-model.bind="hero" view="./item.html"></compose>
+
+    <div class="page-body">
+      <div repeat.for="hero of heroes">
+        <compose view-model.bind="hero" view="./item.html"></compose>
+      </div>
     </div>
   </div>
 </template>
