@@ -2,6 +2,7 @@ import { Item } from './item';
 import { DataService } from './model';
 import { autoinject, View } from 'aurelia-framework';
 import { ViewModelCreatorService, WrappingCollection } from '@logofx/aurelia-mvvm-plugin';
+import { Hero as HeroViewModel } from './hero';
 
 @autoinject
 export class Heroes {
@@ -28,7 +29,7 @@ export class Heroes {
     this.dataService.getHeroes()
         .then(_ => {
         this._heroes = new WrappingCollection(
-          item => this.viewModelCreatorService.create<Item>(Item, item),
+          item => this.viewModelCreatorService.create<HeroViewModel>(HeroViewModel, item),
           this.dataService.heroes);
         })
         .catch(alert);

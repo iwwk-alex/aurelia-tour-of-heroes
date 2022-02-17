@@ -1,25 +1,40 @@
 import { EditableObjectViewModel } from "@logofx/aurelia-mvvm-plugin";
 import { autoinject, transient } from "aurelia-dependency-injection";
-import { Hero } from "model";
+import { Personage } from "model";
 
-@autoinject
-@transient(Item)
-export class Item extends EditableObjectViewModel<Hero> {
+export abstract class Item extends EditableObjectViewModel<Personage> {
 
-  constructor(model: Hero) {
+  constructor(model: Personage) {
     super(model);
   }
+
+  public edit(): void {
+    this.editImplementation();
+  }
+
+  protected save(model: Personage): Promise<Personage> {
+    return this.internalSave(model);
+  }
+
+  protected afterSave(model: Personage): Promise<Personage> {
+    return this.internalAfterSave(model);
+  }
   
-  protected save(model: Hero): Promise<any> {
-    throw new Error("Method not implemented.");
+  protected discard(model: Personage): Promise<Personage> {
+    return this.internalDiscard(model);
   }
-  protected afterSave(model: Hero): Promise<any> {
-    throw new Error("Method not implemented.");
+  
+  protected showError(error: Error): Promise<Error> {
+    return this.internalShowError(error);
   }
-  protected discard(model: Hero): Promise<any> {
-    throw new Error("Method not implemented.");
-  }
-  protected showError(error: any): Promise<any> {
-    throw new Error("Method not implemented.");
-  }
+
+  protected abstract internalSave(model: Personage): Promise<Personage>;
+
+  protected abstract internalAfterSave(model: Personage): Promise<Personage>;
+  
+  protected abstract internalDiscard(model: Personage): Promise<Personage>; 
+  
+  protected abstract internalShowError(error: Error): Promise<Error>;
+
+  protected abstract editImplementation(): void;
 }
